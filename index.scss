@@ -73,7 +73,7 @@ ul.post-footer li {
 }
 
 ul.post-footer li:after {
-    content: '/ ';
+    content: ' / ';
 }
 
 ul.post-footer li:last-child:after {
@@ -83,6 +83,15 @@ ul.post-footer li:last-child:after {
 ul.post-footer a {
     text-decoration: none;
 }
+
+ul.exif {
+  @extend .post-footer;
+  text-transform: none;
+  li:after {
+    content: ' ';
+  }
+}
+
 
 #ask {
     float: right;

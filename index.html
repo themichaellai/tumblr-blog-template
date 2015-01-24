@@ -103,6 +103,13 @@
           {block:Photo}
           <div class="photo">
               {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+              {block:Exif}
+              <ul class="exif">
+                {block:FocalLength}<li>{FocalLength}</li>{/block:FocalLength}
+                {block:Aperture}<li>{Aperture}</li>{/block:Aperture}
+                {block:Exposure}<li>{Exposure}</li>{/block:Exposure}
+              </ul>
+              {/block:Exif}
               {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
           </div>
           {/block:Photo}
@@ -110,8 +117,13 @@
           <div class="photoset">
             {block:Photos}
               <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              <ul class="exif">
+                {block:FocalLength}<li>{FocalLength}</li>{/block:FocalLength}
+                {block:Aperture}<li>{Aperture}</li>{/block:Aperture}
+                {block:Exposure}<li>{Exposure}</li>{/block:Exposure}
+              </ul>
               {block:Caption}<div class="photoset-caption">{Caption}</div>{/block:Caption}
-              {/block:Photos}
+            {/block:Photos}
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
           </div>
           {/block:Photoset}
