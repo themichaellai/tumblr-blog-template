@@ -1,0 +1,167 @@
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:400);
+$sans-font: Helvetica Neue,Lato,sans-serif;
+
+body {
+    font-family: serif;
+    font-size: 20px;
+    color: #333;
+}
+
+.content {
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footer {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 65px;
+}
+
+h1 ,h2 ,h3 ,h4 ,h5 {
+    font-family: $sans-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+h1 a ,h2 a ,h3 a ,h4 a ,h5 a {
+    font-weight: 400;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+p {
+    line-height: 1.4em;
+    margin: 0 0 1em;
+}
+
+header {
+    margin: auto;
+    width: 1000px;
+    padding-top: 50px;
+}
+
+#logo {
+    margin-left: 40px;
+}
+
+ul.post-footer {
+    font-size: 0.65em;
+    font-weight: 400;
+    font-family: $sans-font;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+}
+
+ul.post-footer li {
+    display: inline;
+    margin-right: 0.25em;
+}
+
+ul.post-footer li:after {
+    content: '/ ';
+}
+
+ul.post-footer li:last-child:after {
+    content: '';
+}
+
+ul.post-footer a {
+    text-decoration: none;
+}
+
+#ask {
+    float: right;
+    margin-right: 45px;
+}
+
+.ask-link {
+    font-family: $sans-font;
+    font-size: 0.7em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+ul#pagination {
+    font-size: 0.7em;
+    font-weight: 400;
+    font-family: $sans-font;
+    list-style-type: none;
+    margin: 15px 0px;
+    padding-left: 40px;
+    text-transform: uppercase;
+    display: inline;
+}
+
+ul#pagination li {
+    display: inline;
+    margin-left: 0.25em;
+}
+
+h1 a ,h2 a ,h3 a ,h4 a ,h5 a {
+    font-weight: 400;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+article.post {
+    margin: 40px 40px 55px;
+    font-size: 1em;
+    overflow: hidden;
+}
+
+article.post p a {
+    color: #2F688C;
+}
+
+article.post p a:hover {
+    color: #4CAAE5;
+}
+
+article.post h1 ,article.post h2 ,article.post h3 ,article.post h4 ,article.post h5 {
+    margin-top: 0;
+}
+
+article.post .post-body {
+    display: inline;
+    width: 670px;
+}
+
+article.post:hover .hidden {
+    visibility: visible;
+}
+
+.quote blockquote {
+    margin: 0 20px 40px;
+}
+
+.link h3 a {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.caption {
+    margin-top: 15px;
+}
+
+.photoset-caption {
+  margin: 5px 0px 15px;
+}
+
+

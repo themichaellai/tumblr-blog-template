@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width">
+  <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+  {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <!--Normalize 2.1.0 CSS-->
+  <link rel="stylesheet" href="http://static.tumblr.com/cqczc5x/kYdmihjuj/normalize.css" type="text/css" media="all">
+  <style type="text/css">
+  ##csshere##
+  </style>
+  <style type="text/css">
+
+    img, video, object, embed {
+      max-width: 100%;
+      height: auto !important;
+    }
+
+    .clearfix {zoom:1;}
+    .clearfix:before, .clearfix:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .clearfix:after {clear: both;}
+
+    /*Tumblr inherited */
+    iframe#tumblr_controls {}
+    .search_query {}
+    .read_more_container a {}
+
+  </style>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-35675007-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+  <header id="header">
+    <h1 id="logo"><a href="/">{Title}</a></h1>
+    {block:Description}<div class="description">{Description}</div>{/block:Description}
+    <ul id="nav">
+      {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+    </ul>
+  </header>
+  <section class="content">
+
+
+    {block:SearchPage}
+    <div class="result">
+      <p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
+      {block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
+    </div>
+    {/block:SearchPage}
+    {block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
+
+    {block:Posts}
+    <article class="post {TagsAsClasses}">
+      {block:Title}<h3>{Title}</h3>{/block:Title}
+      <div class="post-body-container">
+        <div class="post-body">
+          {block:Text}
+          <div class="text">
+            {Body}
+          </div>
+          {/block:Text}
+          {block:Quote}
+          <div class="quote">
+            <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
+            {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+          </div>
+          {/block:Quote}
+          {block:Link}
+          <div class="link">
+            <h3><a href="{URL}" {Target}>{Name}</a></h3>
+            {block:Description}<div class="caption">{Description}</div>{/block:Description}
+          </div>
+          {/block:Link}
+          {block:Video}
+          <div class="video">
+            {Video-500}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+          {/block:Video}
+          {block:Audio}
+          <div class="audio">
+            {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+            {AudioPlayerBlack}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+          {/block:Audio}
+          {block:Photo}
+          <div class="photo">
+              {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+              {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+          {/block:Photo}
+          {block:Photoset}
+          <div class="photoset">
+            {block:Photos}
+              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              {block:Caption}<div class="photoset-caption">{Caption}</div>{/block:Caption}
+              {/block:Photos}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+          {/block:Photoset}
+
+          {block:Panorama}
+          <div class="panorama">
+              {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+              {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+          {/block:Panorama}
+
+          {block:Chat}
+          <div class="chat">
+            {block:Title}<h3>{Title}</h3>{/block:Title}
+            <ul class="conversation">
+              {block:Lines}
+              <li class="line {Alt}">
+                {block:Label}<span class="person">{Label}</span>{/block:Label}
+                <span class="person-said">{Line}</span>
+              </li>
+              {/block:Lines}
+            </ul>
+          </div>
+          {/block:Chat}
+          {block:Answer}
+          <div class="answer">
+            <img src="{AskerPortraitURL-40}">
+            {Asker}
+            {Question}
+            {Answer}
+          </div>
+          {/block:Answer}
+        </div>
+        <ul class="post-footer">
+          {block:Date}
+          <li>
+            <a href="{Permalink}" class="permalink" title="{ShortMonth} {DayOfMonth}, {Year} {12Hour}:{Minutes} {AmPm}">
+            {TimeAgo}
+            </a>
+          </li>
+          {/block:Date}
+          {block:IndexPage}
+          {/block:IndexPage}
+        </ul>
+      </div>
+    </article>
+    {/block:Posts}
+
+  </section><!--close content-->
+  <section class="footer">
+    {block:PermalinkPagination}
+    <ul id="pagination">
+      {block:PreviousPost}
+      <li>
+        <a class="prev"href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
+      </li>
+      {block:NextPost}
+      <li>
+        <a class="next" href="{NextPost}">{lang:Next post}</a>
+      </li>
+      {/block:NextPost}
+    </ul>
+    {/block:PermalinkPagination}
+    {block:Pagination}
+    <ul id="pagination">
+      {block:PreviousPage}
+      <li>
+        <a class="prev" href="{PreviousPage}">{lang:Previous}</a>
+      </li>
+      {/block:PreviousPage}
+      <li><a href="/archive">{lang:Archive}</a></li>
+      {block:NextPage}
+      <li>
+        <a class="next" href="{NextPage}">{lang:Next}</a>
+      </li>
+      {/block:NextPage}
+    </ul>
+    {/block:Pagination}
+    <div id="ask">
+      {block:AskEnabled}<a href="/ask" class="ask-link">{AskLabel}</a>{/block:AskEnabled}
+    </div>
+  </section>
+</body>
+</html>
